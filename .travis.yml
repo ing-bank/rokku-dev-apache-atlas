@@ -8,6 +8,4 @@ env:
 script:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 - docker build -t arempter/gargoyle-atlas:latest .; 
-docker push arempter/$BUILDNAME:$TRAVIS_BRANCH;
-
-docker build --quiet -t nielsdenissen/$BUILDFOLDER:$TRAVIS_BRANCH .;
+  docker push arempter/$BUILDNAME:$TRAVIS_BRANCH;
