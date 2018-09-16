@@ -6,7 +6,7 @@ ENV	MAVEN_OPTS	"-Xms2g -Xmx2g"
 RUN curl ${ATLAS_REPO} -o apache-atlas-1.0.0-sources.tar.gz \
 	&& tar xzvf apache-atlas-1.0.0-sources.tar.gz \
 	&& cd apache-atlas-sources-1.0.0 \
-	&& mvn clean -DskipTests package -Pdist,embedded-hbase-solr \
+	&& mvn clean -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -DskipTests package -Pdist,embedded-hbase-solr \
 	&& mv distro/target/apache-atlas-*-bin.tar.gz /apache-atlas.tar.gz
 
 FROM centos:7
