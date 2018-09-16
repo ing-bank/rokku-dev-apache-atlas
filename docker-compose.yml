@@ -1,0 +1,8 @@
+version: "2"
+services:
+
+  atlas-server:
+    build: .
+    image: atlasforgargoyle_atlas-server:latest
+    ports:
+      - "21000:21000"
