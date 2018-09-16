@@ -1,13 +1,11 @@
 sudo: required
-
 services:
-  - docker
-
+- docker
 env:
   matrix:
   - BUILDNAME=gargoyle-atlas
-
+  - secure: puTOCDBPks0Ka7VB+cOMOeY+F1x6whb8Ecl7HxzdoHnahVPHjWqAmjII2rKcmDPsA/25r6LKDhvHjcb9lWJUPH2Ww7qQ3ZL54N2CthAhEbqFX5r/tA9xCTOvvU6CCFAi4Ys8gDacp7Z7UhmBuPcoNmecfibJBAGOtIXsstJhGPqatA4s/b47NtnhitK6IdqmX7VhRP0wvG0OB1wfuFlVu3H1ll5p0ovSfZ4ovplVk4VXylpja99+VptDYfgYiscepGHbrpWvYlFzPZ56FcNmZ6653cgnSlzm7fBQFqB+BheL++iX5Z5WQU3swm8Uy6JvCj7Vj1G418GFTFxJOM+GCLLVZjnd3lsHNZn39mI3+BZBGuZ+3U8xaNEqMiCQpGwpvZlYp/28iHKf26SpPTVgwJqmd5OsYvp8KMA7dMlG/2VWjBFWEtT2OdlX2dkbfetPYWmXV0EdPEjDOA/3blOP5RTueuzzbgpqUsg5OYMcxBOtRWxG4EtAmMIYT95MRJgQ+7BS/y1SJ68+8L/Putd65fCCdM00KvkBvmoJmLSOhE66TuUpwIHiK4R8LVQJ7wCkA/gjlBOS1KeNoPivlBkmb0Rhh9CN6DTA1aO7jzBfCv109pfoMndvpPRc/xuk4rpA6vrz61faHdqn2T3wnDtzDgB+Ws+e9wTVSuwh1/6LPZ8=
+  - secure: iO+GnDI4TBOrtEUN3ym4ybRIx8hGjJ4N6eoUTlSsyFPkhJhFl+FGEmkR15G7jPjuJ8Beg++5troaoR5PGD6lDjXH9tkyHLxDr3kb/7uPc/Si9WBKWSBSV7ARRMzlQiDPlKX8nNO3ikjEkafogSRfMM0E3aJC88U2eM3wkCvlrMUtzANJlR4IKpmXSHWUFBJ5jvV+FofdQ+u1VuX54T1ebBuVmB9E8+I+ths0svZ8b4lgYS1Dlw6M8q6UHg9h69JH5DuKs3JSfijSyk+QJt6U/iH3YtySZteKfOCBgG86NQX3CoDP1c521BfNe9XpM4mxOsa37fAeM8P+sNYz7djksv6bEqJHE256CHFN4tYpxsVLNaDTjQuMeyDSAw4LqQx5m9OLN461NjTuWb9RTwfTR1QrusYVa0lxBAXVp0em+lcy5Wj4MomFZiZ0H+b9cC4WG+9Y7ZYB6BDl4I2tSF4w3x5MMrP862JnDTOuhcurkCGR3FHgnznOA/CztJlyw9RK1MruMw+ChWPquqNQsW9njdrmib3iLCO5o0ov8zPkk+JH4+o8u/2e6baiyifLLgFX6IYYmHw7fjF/a9cQLgWQeOmefv5Tk7dJrKL6kyXd9lGj6MAO0lt858gA6xCA0efJIZ3b0uYNbZwTpvZagqTKbp7nSvokjLR6FFGR9Eh/Y/w=
 script:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin;
-  - docker build -t arempter/$BUILDNAME:$TRAVIS_BRANCH .;
-    docker push arempter/$BUILDNAME:$TRAVIS_BRANCH;
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin;
+- docker build -t arempter/$BUILDNAME:$TRAVIS_BRANCH .; docker push arempter/$BUILDNAME:$TRAVIS_BRANCH;
