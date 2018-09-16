@@ -22,8 +22,6 @@ RUN cd /opt \
 	&& tar xzvf /apache-atlas.tar.gz \
 	&& rm -rf /apache-atlas.tar.gz 
 
-#ADD conf/atlas-application.properties ${ATLAS_HOME}/conf/
-
 ENTRYPOINT ["sh", "-c", "/entrypoint.sh"]
 
-EXPOSE 21000
+EXPOSE 21000 9027
