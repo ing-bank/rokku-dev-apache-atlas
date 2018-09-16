@@ -1,0 +1,13 @@
+sudo: required
+
+services:
+  - docker
+
+env:
+  matrix:
+  - BUILDNAME=gargoyle-atlas
+
+script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin;
+  - docker build -t arempter/$BUILDNAME:$TRAVIS_BRANCH .;
+    docker push arempter/$BUILDNAME:$TRAVIS_BRANCH;
