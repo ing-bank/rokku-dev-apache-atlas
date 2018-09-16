@@ -3,12 +3,11 @@ services:
 - docker
 env:
   matrix:
-  - BUILDFOLDER=gargoyle-atlas
   - secure: iO+GnDI4TBOrtEUN3ym4ybRIx8hGjJ4N6eoUTlSsyFPkhJhFl+FGEmkR15G7jPjuJ8Beg++5troaoR5PGD6lDjXH9tkyHLxDr3kb/7uPc/Si9WBKWSBSV7ARRMzlQiDPlKX8nNO3ikjEkafogSRfMM0E3aJC88U2eM3wkCvlrMUtzANJlR4IKpmXSHWUFBJ5jvV+FofdQ+u1VuX54T1ebBuVmB9E8+I+ths0svZ8b4lgYS1Dlw6M8q6UHg9h69JH5DuKs3JSfijSyk+QJt6U/iH3YtySZteKfOCBgG86NQX3CoDP1c521BfNe9XpM4mxOsa37fAeM8P+sNYz7djksv6bEqJHE256CHFN4tYpxsVLNaDTjQuMeyDSAw4LqQx5m9OLN461NjTuWb9RTwfTR1QrusYVa0lxBAXVp0em+lcy5Wj4MomFZiZ0H+b9cC4WG+9Y7ZYB6BDl4I2tSF4w3x5MMrP862JnDTOuhcurkCGR3FHgnznOA/CztJlyw9RK1MruMw+ChWPquqNQsW9njdrmib3iLCO5o0ov8zPkk+JH4+o8u/2e6baiyifLLgFX6IYYmHw7fjF/a9cQLgWQeOmefv5Tk7dJrKL6kyXd9lGj6MAO0lt858gA6xCA0efJIZ3b0uYNbZwTpvZagqTKbp7nSvokjLR6FFGR9Eh/Y/w=
   - secure: Mn7liZtT8x+6B3KjwcbnGL+drUpk+0glmTXxl6dxLL+E8Q8tMgP2bwRLkpHaYbYNDZXYYpD+Ek+JnOXQHbiRtA4EABuXXOyqan7Brrj6Tt56+7A6FtVewDPTWhd9QvXN/diFTlA5kAeTpkB9b/youeD/4MqA+77qJ04MuIht0eibZkPa1QTdDMOv+uMwdjc5/K5kDZ7VGKyMtOl/YpWvlCm6Xn7zdRme3Esg8I24VLECzS89U+dYpzLPEK1ACi8Grz3RRli9hdK5J1AQHbFCuGeGiwd243+Jd7LBszxV2NdnIZUIAZ69NRdujcoCPMo1XWCVIH8hJh0TStX8uOT/i8Zan/7mK3Aok2eEC1cPe69EFm//+6kcqBEcABbzIhBDgJOAaxejGg+PBT9uWKfGTtsLkBsJtZnd4DjjSNU27d28hgA+Q+DTUMJHasJqtZZnaEvCbP2JkIauGr/auXHc/DYXEKq7YB8cbU+ai0tgkNHHMyZHbZN9lYbOJ7BeXI78r3MrYHSzEyuDy2KDpskM+xE7DASorGjcRRhpTC8NVTGobtqCQ9SgRpcFLY2u/gsVzTPrC3w1KAg1cL4UgWy+D9xTpedwwyVNCY6kJt/lwyk+xPx1Tm6aV2V0ZIX71fIc/tnkHBlcDw8adSUMe0FQUtqOHy1gL4eDHJ6Ji+o4/6s=
 script:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin;
-- docker build -t arempter/$BUILDFOLDER:$TRAVIS_BRANCH .; 
+- docker build -t arempter/gargoyle-atlas:latest .; 
 docker push arempter/$BUILDNAME:$TRAVIS_BRANCH;
 
 docker build --quiet -t nielsdenissen/$BUILDFOLDER:$TRAVIS_BRANCH .;
