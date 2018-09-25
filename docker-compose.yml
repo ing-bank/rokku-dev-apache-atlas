@@ -3,6 +3,6 @@ services:
 
   atlas-server:
     build: .
-    image: atlasforgargoyle_atlas-server:latest
+    image: arempter/gargoyle-atlas:latest
     ports:
       - "21000:21000"
