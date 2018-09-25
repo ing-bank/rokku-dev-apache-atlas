@@ -23,7 +23,7 @@ RUN cd /opt \
 	&& rm -rf /apache-atlas.tar.gz
 
 COPY model /tmp/model
-COPY resources/setup-atlas.sh /tmp
+COPY resources/atlas-setup.sh /tmp
 
 ENTRYPOINT ["sh", "-c", "/entrypoint.sh"]
 
