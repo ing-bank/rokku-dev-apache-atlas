@@ -20,7 +20,10 @@ RUN yum update -y  \
 	&& yum clean all 
 RUN cd /opt \
 	&& tar xzf /apache-atlas.tar.gz \
-	&& rm -rf /apache-atlas.tar.gz 
+	&& rm -rf /apache-atlas.tar.gz
+
+COPY model /tmp/model
+COPY resources/setup-atlas.sh /tmp
 
 ENTRYPOINT ["sh", "-c", "/entrypoint.sh"]
 
