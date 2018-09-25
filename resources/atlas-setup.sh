@@ -20,17 +20,17 @@ done
 if [ "$start_timeout_exceeded" = "false" ]; then
     # Setup atlas types
     printf "Creating  ingestion-source type... \n"
-    curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/model/tmp/typedef-ingestion-source.json
+    curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/tmp/model/typedef-ingestion-source.json
     printf "\ningestion-source created\n"
 
     # Setup atlas servicedefs
     printf "Creating file type... \n"
-    curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/model/tmp/typedef-file.json
+    curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/tmp/model/typedef-file.json
     printf "\nfile type created\n"
 
     # Setup atlas services
     printf "Creating  aws_cli_process type... \n"
-    curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/model/tmp/typedef-awscli_process.json
+    curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/tmp/model/typedef-awscli_process.json
     printf "\naws_cli_process created\n"
 
     echo "Done setting up Atlas types "
