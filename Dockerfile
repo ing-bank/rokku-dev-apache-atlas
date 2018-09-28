@@ -16,14 +16,14 @@ COPY --from=stage-atlas /apache-atlas.tar.gz /apache-atlas.tar.gz
 ADD resources/entrypoint.sh /entrypoint.sh
 
 RUN yum update -y  \
-	&& yum install java-1.8.0-openjdk java-1.8.0-openjdk-devel python -y \
+	&& yum install java-1.8.0-openjdk java-1.8.0-openjdk-devel python net-tools -y \
 	&& yum clean all 
 RUN cd /opt \
 	&& tar xzf /apache-atlas.tar.gz \
 	&& rm -rf /apache-atlas.tar.gz
 
 COPY model /tmp/model
-COPY resources/setup-atlas.sh /tmp
+COPY resources/atlas-setup.sh /tmp
 
 ENTRYPOINT ["sh", "-c", "/entrypoint.sh"]
 
