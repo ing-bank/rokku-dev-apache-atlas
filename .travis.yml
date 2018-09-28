@@ -7,5 +7,6 @@ env:
   - secure: OZlKv8R/um/yg46UxXhGVXw6OBqbWte5Rf9y+3bbo2k1s6pwYjQhTGc5tHl0ktyy8N2FSh9coK6oyl0nQrvvL8jNb0VW2k2bCndKHefy6pztZlKXU0q00jjjVNwFwF7FUkHghX5cRLjyPRB1y6nW5iwb35qSFO88Lv6KBjssP1hdMFLtlUH2Bui7p2q0u5W071Cs9SqPMSwD2Y/Oj3ydyPf17EmlkIMaQMbICyPPKbcIifdByO/WnfpsfxZ9uwb7v2AXqQOFk22eSiP/DKJMj/Lh28sRCnKS1jp99Fd9xyYTk/s9gNcnyzr1xMqhLPAD2xyoXvKrql0T6/+ebDJYB/oJxQ7y0eLQK5IumddZDtWDeQGAkFaglUQX1rvctv072euFln0Iq09tqRbLAfptxj8kbhdbSjW6RucM3sSfGq8aQKZ21OGooCD7uCRyxLwQnSuuIm4lA24sUvzfWx5OMu6Nwl4pEsj8ydBXtKTJfpnpRTgFrXN0+mHU7vMXy1sl37NW6ocKA3d2Riak6JJkpa5QhQAYwYTS0Nc6oLT6MxhB2IWFKiXWEEKWBjtsFKDJoEme9EBngcp/Fwex800tjDhy359CrWg00WShW2C6ZECyh2jYQhcz1hobxvuQN2L5pwLxopt4u5j1KBIgNcAdfsB7pBVXBtDZ1jhzdgE/9mU=
 script:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- travis_wait 80 docker build --quiet -t arempter/gargoyle-atlas:latest .; docker
-  push arempter/gargoyle-atlas:latest
+- travis_wait 80 docker build --quiet -t arempter/gargoyle-atlas:$TRAVIS_BRANCH .; docker
+  push arempter/gargoyle-atlas:$TRAVIS_BRANCH
+  if [ "${TRAVIS_BRANCH}" == "master" ]; then docker tag arempter/gargoyle-atlas:$TRAVIS_BRANCH arempter/gargoyle-atlas:latest; docker push arempter/gargoyle-atlas:latest; fi
