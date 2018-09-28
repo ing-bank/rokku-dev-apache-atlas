@@ -8,5 +8,5 @@ env:
 script:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 - travis_wait 80 docker build --quiet -t arempter/gargoyle-atlas:$TRAVIS_BRANCH .; docker
-  push arempter/gargoyle-atlas:$TRAVIS_BRANCH
+  push arempter/gargoyle-atlas:$TRAVIS_BRANCH;
   if [ "${TRAVIS_BRANCH}" == "master" ]; then docker tag arempter/gargoyle-atlas:$TRAVIS_BRANCH arempter/gargoyle-atlas:latest; docker push arempter/gargoyle-atlas:latest; fi
