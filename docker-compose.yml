@@ -3,6 +3,6 @@ services:
 
   atlas-server:
     build: .
-    image: arempter/gargoyle-atlas:latest
+    image: nielsdenissen/airlock-dev-apache-atlas
     ports:
       - "21000:21000"

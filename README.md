@@ -1,4 +1,4 @@
-## Apache Atlas docker image for gargoyle project
+# Airlock Dev - Apache Atlas
 
 ## Background
 
