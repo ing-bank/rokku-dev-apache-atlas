@@ -1,12 +1,26 @@
 sudo: required
+
 services:
 - docker
+
 env:
   global:
-  - secure: iO+GnDI4TBOrtEUN3ym4ybRIx8hGjJ4N6eoUTlSsyFPkhJhFl+FGEmkR15G7jPjuJ8Beg++5troaoR5PGD6lDjXH9tkyHLxDr3kb/7uPc/Si9WBKWSBSV7ARRMzlQiDPlKX8nNO3ikjEkafogSRfMM0E3aJC88U2eM3wkCvlrMUtzANJlR4IKpmXSHWUFBJ5jvV+FofdQ+u1VuX54T1ebBuVmB9E8+I+ths0svZ8b4lgYS1Dlw6M8q6UHg9h69JH5DuKs3JSfijSyk+QJt6U/iH3YtySZteKfOCBgG86NQX3CoDP1c521BfNe9XpM4mxOsa37fAeM8P+sNYz7djksv6bEqJHE256CHFN4tYpxsVLNaDTjQuMeyDSAw4LqQx5m9OLN461NjTuWb9RTwfTR1QrusYVa0lxBAXVp0em+lcy5Wj4MomFZiZ0H+b9cC4WG+9Y7ZYB6BDl4I2tSF4w3x5MMrP862JnDTOuhcurkCGR3FHgnznOA/CztJlyw9RK1MruMw+ChWPquqNQsW9njdrmib3iLCO5o0ov8zPkk+JH4+o8u/2e6baiyifLLgFX6IYYmHw7fjF/a9cQLgWQeOmefv5Tk7dJrKL6kyXd9lGj6MAO0lt858gA6xCA0efJIZ3b0uYNbZwTpvZagqTKbp7nSvokjLR6FFGR9Eh/Y/w=
-  - secure: OZlKv8R/um/yg46UxXhGVXw6OBqbWte5Rf9y+3bbo2k1s6pwYjQhTGc5tHl0ktyy8N2FSh9coK6oyl0nQrvvL8jNb0VW2k2bCndKHefy6pztZlKXU0q00jjjVNwFwF7FUkHghX5cRLjyPRB1y6nW5iwb35qSFO88Lv6KBjssP1hdMFLtlUH2Bui7p2q0u5W071Cs9SqPMSwD2Y/Oj3ydyPf17EmlkIMaQMbICyPPKbcIifdByO/WnfpsfxZ9uwb7v2AXqQOFk22eSiP/DKJMj/Lh28sRCnKS1jp99Fd9xyYTk/s9gNcnyzr1xMqhLPAD2xyoXvKrql0T6/+ebDJYB/oJxQ7y0eLQK5IumddZDtWDeQGAkFaglUQX1rvctv072euFln0Iq09tqRbLAfptxj8kbhdbSjW6RucM3sSfGq8aQKZ21OGooCD7uCRyxLwQnSuuIm4lA24sUvzfWx5OMu6Nwl4pEsj8ydBXtKTJfpnpRTgFrXN0+mHU7vMXy1sl37NW6ocKA3d2Riak6JJkpa5QhQAYwYTS0Nc6oLT6MxhB2IWFKiXWEEKWBjtsFKDJoEme9EBngcp/Fwex800tjDhy359CrWg00WShW2C6ZECyh2jYQhcz1hobxvuQN2L5pwLxopt4u5j1KBIgNcAdfsB7pBVXBtDZ1jhzdgE/9mU=
+  - secure: amAje9qKMLPCUe+ZKgEgqbu6fJ0/4x4hGGeO2fFOrWHqWqfhMAumzRgPRitRV13PnaNCNBjdU6q2loeJtoYB1HCfAT3qbLeHl9ZgPj2X6kgUv6FFvTnwlmlms787+r0Pfeb5Ra/MGG64SzOyueCoV+wBI4l+LR0hw4UFIObj1nVMzTG/jCfqpkn4NA/JXhujv2sp3e/OvbXtBMuJt2UrvlCB6jERHxP7EhNMXhYssi1+3D/AKSD2w/Ye6brknDjghDMTR46LvVlqVWksr8CinaZ8nRaq+ufDud1tkLRUbR5QEWo7phi3RjH7NDwOmwnCx4NcYKeLnTxJhiFUxUSze8Wcl2qV19LAV/1SNA5ugJHcg30aoQkGiij+REpuogtFWGQZCduq2A9YKncgTy7NG28k58y9almiX0ijv0sU4sGySB907zW+takx3gYLTi8JkIsK1gxRxhDtrsPmpC/3ln1Js+ZkWWtryDyJs+5vFe1QIcnnM5tFjyavj8CFBh5O26IwloBaPNrx1ZwnoMH/Z0YgJORXPsbrFa8iGc67cc10/cJZmImajEaKiCKcySzthFlZlHtJqf0yR/TcI60F5iMIPMFTjHiU3uzgBhDW8U3mA/ZCLBxjqCxCIfQw2hUNRqkQnvDbXLMLGPyOT38HOVHWn2MiE4PuHu7GU55XRkE=
+  - secure: rXUXRqmCGXxumIZO+PjAIakmSj2gqEH6p6phsh/fa2VYvXck0MUtnQ4OGXMRE26TPDbbyImBWQaQJxFWQrN3/0yGxTlKeuZrHgqfAEbEmB4p7MYx5KyrVfg1L01X/JQats22aCcPPptOxfP9w+SvwFMFNb2AdwyxYTF8cm7tM1ZifahYZMD0mx7pexJ8kAyeNWXuf9AJFHl2Pzi02TCu0/mp/J6wGgKKdQUkxQ9t+Q78YG5PpkRpfS0uHzzcQrkt63fmK4Nsf90MNzUSKXIwX+/se3YOQMVULEUBB0YRXOPaU51PFPHB3B+32qqK1QshCKf754qV3WSOvnH/Anp2WTGxb3ihQSrvI39QW7Z5mu+SaGUbZrJ+FlRLp4GC7RF41LuRW4Vr6PZ5V8+vXH57hPqY5DWKQcPyd7c6QDFQrdl9/JrLlP1jKQYvke8kCreIK2viUG2gcKG6ZXCdYmJpe/9g2LeX/0EfhDlut547mpLSp0URaUGcI+crapng5SNqPJnn26EylVbdIeVYRah0fuqemfnoofeQWx5hnD4BDaTpp62DwbKJ/vTmhy1LY6kr0vFmPiLJ2z1ABlsZGEd/FEwvfZV8Kj+9eykFpc+g8GPIOvrONf0+gdS/rDUf2ggA4ZRhztjMaU+VckPrAm055A9IWqb9v/+kD8uSDm7bRBI=
+
+# We will not build an image on the master tag, thereby forcing people to use tagged versions only
+# Also there is an issue with using TRAVIS_BRANCH for PRs since this variable will be set to the target of the PR (e.g. master for PR to master) and then build an image for master unwanted before the merge happened
 script:
+- echo "Running pipeline for branch ${TRAVIS_BRANCH}"
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- travis_wait 80 docker build --quiet -t arempter/gargoyle-atlas:$TRAVIS_BRANCH .; docker
-  push arempter/gargoyle-atlas:$TRAVIS_BRANCH;
-  if [ "${TRAVIS_BRANCH}" == "master" ]; then docker tag arempter/gargoyle-atlas:$TRAVIS_BRANCH arempter/gargoyle-atlas:latest; docker push arempter/gargoyle-atlas:latest; fi
+- export DOCKER_TAG="${TRAVIS_BRANCH/\//_}"
+- if [ "${TRAVIS_BRANCH}" != "master" ]; then 
+    echo "Build image for tag ${DOCKER_TAG}";
+    docker pull nielsdenissen/airlock-dev-apache-atlas:latest;
+    travis_wait 80 docker build --quiet -t nielsdenissen/airlock-dev-apache-atlas:$DOCKER_TAG .;
+    docker push nielsdenissen/airlock-dev-apache-atlas:$DOCKER_TAG;
+  fi
+- if [ -n "$TRAVIS_TAG" ]; then 
+    docker tag nielsdenissen/airlock-dev-apache-atlas:$DOCKER_TAG nielsdenissen/airlock-dev-apache-atlas:latest;
+    docker push nielsdenissen/airlock-dev-apache-atlas:latest;
+  fi
