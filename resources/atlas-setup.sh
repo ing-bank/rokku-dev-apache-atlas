@@ -30,7 +30,7 @@ if [ "$start_timeout_exceeded" = "false" ]; then
 
     # Setup atlas services
     printf "Creating  aws_cli_process type... \n"
-    curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/tmp/model/typedef-awscli_process.json
+    curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/tmp/model/typedef-client_process.json
     printf "\naws_cli_process created\n"
 
     echo "Done setting up Atlas types "
