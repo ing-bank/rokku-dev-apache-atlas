@@ -3,9 +3,9 @@
     {
       "superTypes" : [ "Process" ],
       "category" : "ENTITY",
-      "name" : "aws_cli_script",
+      "name" : "airlock_client",
       "description" : "a type definition for AWS tools",
-      "typeVersion" : "1.0",
+      "typeVersion" : "1.1",
       "attributeDefs" : [
         {
           "name" : "operation",
