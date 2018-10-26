@@ -18,8 +18,8 @@
           "isIndexable" : false
         }
       ,{
-          "name" : "Server",
-          "typeName" : "Server",
+          "name" : "server",
+          "typeName" : "server",
           "isOptional" : false,
           "cardinality" : "SINGLE",
           "valuesMinCount" : 1,

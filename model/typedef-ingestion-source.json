@@ -23,7 +23,7 @@
        "Infrastructure"
      ],
      "category": "ENTITY",
-     "name": "Server",
+     "name": "server",
      "description": "a type definition for server machine",
      "typeVersion": "1.0",
      "attributeDefs": [
