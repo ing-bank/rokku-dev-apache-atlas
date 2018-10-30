@@ -23,16 +23,17 @@ if [ "$start_timeout_exceeded" = "false" ]; then
     curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/tmp/model/typedef-ingestion-source.json
     printf "\ningestion-source created\n"
 
-    # Setup atlas servicedefs
+    # Setup atlas classification defs
     printf "Creating file type... \n"
-    curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/tmp/model/typedef-file.json
-    printf "\nfile type created\n"
+    curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/tmp/model/typedef-classification.json
+    printf "\nclassifications type created\n"
 
     # Setup atlas services
-    printf "Creating  aws_cli_process type... \n"
+    printf "Creating  airlock_client type... \n"
     curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/tmp/model/typedef-client_process.json
-    printf "\naws_cli_process created\n"
+    printf "\nairlock_client created\n"
 
+    sleep 15
     echo "Done setting up Atlas types "
 else
     echo "Waited too long for Atlas to start, skipping setup..."
