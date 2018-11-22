@@ -5,8 +5,8 @@ services:
 
 env:
   global:
-  - secure: amAje9qKMLPCUe+ZKgEgqbu6fJ0/4x4hGGeO2fFOrWHqWqfhMAumzRgPRitRV13PnaNCNBjdU6q2loeJtoYB1HCfAT3qbLeHl9ZgPj2X6kgUv6FFvTnwlmlms787+r0Pfeb5Ra/MGG64SzOyueCoV+wBI4l+LR0hw4UFIObj1nVMzTG/jCfqpkn4NA/JXhujv2sp3e/OvbXtBMuJt2UrvlCB6jERHxP7EhNMXhYssi1+3D/AKSD2w/Ye6brknDjghDMTR46LvVlqVWksr8CinaZ8nRaq+ufDud1tkLRUbR5QEWo7phi3RjH7NDwOmwnCx4NcYKeLnTxJhiFUxUSze8Wcl2qV19LAV/1SNA5ugJHcg30aoQkGiij+REpuogtFWGQZCduq2A9YKncgTy7NG28k58y9almiX0ijv0sU4sGySB907zW+takx3gYLTi8JkIsK1gxRxhDtrsPmpC/3ln1Js+ZkWWtryDyJs+5vFe1QIcnnM5tFjyavj8CFBh5O26IwloBaPNrx1ZwnoMH/Z0YgJORXPsbrFa8iGc67cc10/cJZmImajEaKiCKcySzthFlZlHtJqf0yR/TcI60F5iMIPMFTjHiU3uzgBhDW8U3mA/ZCLBxjqCxCIfQw2hUNRqkQnvDbXLMLGPyOT38HOVHWn2MiE4PuHu7GU55XRkE=
-  - secure: rXUXRqmCGXxumIZO+PjAIakmSj2gqEH6p6phsh/fa2VYvXck0MUtnQ4OGXMRE26TPDbbyImBWQaQJxFWQrN3/0yGxTlKeuZrHgqfAEbEmB4p7MYx5KyrVfg1L01X/JQats22aCcPPptOxfP9w+SvwFMFNb2AdwyxYTF8cm7tM1ZifahYZMD0mx7pexJ8kAyeNWXuf9AJFHl2Pzi02TCu0/mp/J6wGgKKdQUkxQ9t+Q78YG5PpkRpfS0uHzzcQrkt63fmK4Nsf90MNzUSKXIwX+/se3YOQMVULEUBB0YRXOPaU51PFPHB3B+32qqK1QshCKf754qV3WSOvnH/Anp2WTGxb3ihQSrvI39QW7Z5mu+SaGUbZrJ+FlRLp4GC7RF41LuRW4Vr6PZ5V8+vXH57hPqY5DWKQcPyd7c6QDFQrdl9/JrLlP1jKQYvke8kCreIK2viUG2gcKG6ZXCdYmJpe/9g2LeX/0EfhDlut547mpLSp0URaUGcI+crapng5SNqPJnn26EylVbdIeVYRah0fuqemfnoofeQWx5hnD4BDaTpp62DwbKJ/vTmhy1LY6kr0vFmPiLJ2z1ABlsZGEd/FEwvfZV8Kj+9eykFpc+g8GPIOvrONf0+gdS/rDUf2ggA4ZRhztjMaU+VckPrAm055A9IWqb9v/+kD8uSDm7bRBI=
+  - secure: "myt7mwAs8XHHSqp1G9wWpIJbEU8/EWe7WH1+5TJCKx6B195UDV9DmTdMSBTXbhgcMWs6M2IYcAjZ5B2I1CVsgqLTQZaEHQGPh6YPu9MBAjWy2dlkCBr1fY68RPCYN24LCZcWId5yIVgHIBGtc5g5UzYn9S04wNMOxXC8xLJJT/OJs7FDx05gOvS1McTBnjrSduggm/Vh5omgag5j25x8waYN/Ct9BLw+mik3XGF21wjMMOy2T3+iaRPKir2UE8cKRbjT1VTjPELwtTec+JveBbuvazyGNsFH8QzTHBWmo6l1kI7/dydhvgwmF5JtCiWekovlqXnMPJyjQtq5/F9A3VuVOPloDaWVHGnyCfLjqllDbbsCWSdasmncO0p9ePnDEqQbDriT8lws8bNtjHUkvHytzEtZtE1MXVknLI4WeNhQtkfMn2p3NucFOx/NPSuGv6L3xP8gU/GO+ziP8Hnfz+8YmVGbdv2c3F52SCf3Cm2GmfiHwbb1KJa2+CqXwXHIB2PTf0r3J+sMTQgDo4bSSKyXiWModVS3E4BTpq/P+INAqXGst1jThQFXQW3/FlR0jC6Y8tvips7gF+/hwTeFmP1MF5XQBc2Jf9cfsyU8Yvdp0tPbGD3u5jwQzsiWbFQNDqjHTpRuY+iCZ85yfAriKLvWKzqKGSm/syllVwYwVHo="
+  - secure: "dca8qXy9CTQIQIZdDqzL0vx6+7PpQTkct3eTRrL8bQrCdv3xzNJ6R3RP9ZmRZQSw57PuDJSHrJV5Qra7pkWVjOCaJNrTiUG7p4Ilm99LxUleOhQXb0aMag8zq5A1NsYApd6iMm2R7npoR4k1frPStoFa6jM97lpxPqKnlmkOzYtb4VhBTiDPj48GXKY2IpKxwmAYgH2T+lsO0LkquGSxyacaPYNIIX4bYA6bBiPlhq1NGcuYpzu+hHraJwX3FYVENK/MlxTIGWm4I9DkcPJO3XEj7jCzCnun5mt+8GiXVsBhLsUcHsp+aKghBd00wYTfqhsHbr9m3A44fYxFR65N/6C5yg895j8aK1pKAMVu2qGSGmr0JRRhq0nkBvYs5qGnsOZohfhVkpLjis7gXCt0Wfxit28PQMygt3sfciCyW7iiLknaTrKuUXCyqJEWVLIW8w7DoQthJPBL6MD6EmmQ6MGU5Uc8V7rbiPqgvgYZcOPMODiGaFLsqg+bMntzK7/VYUwPefsxECOCqwq/seBbS2aIn8j1xXOpf+b2N7uW09rHlwqNd58B9lZVbipORkKV/7m9tDMpz2iH0NfkBCEtkcteaO1QnreOdZE40Yx1HErgxQlzRKSHIuLJZ4qMWW0AD/8kT0zJMUSj26xNTx2m9rrG7Jkpi8Br29LnI9pbRNY="
 
 # We will not build an image on the master tag, thereby forcing people to use tagged versions only
 # Also there is an issue with using TRAVIS_BRANCH for PRs since this variable will be set to the target of the PR (e.g. master for PR to master) and then build an image for master unwanted before the merge happened
@@ -16,11 +16,11 @@ script:
 - export DOCKER_TAG="${TRAVIS_BRANCH/\//_}"
 - if [ "${TRAVIS_BRANCH}" != "master" ]; then 
     echo "Build image for tag ${DOCKER_TAG}";
-    docker pull nielsdenissen/airlock-dev-apache-atlas:latest;
-    travis_wait 80 docker build --quiet -t nielsdenissen/airlock-dev-apache-atlas:$DOCKER_TAG .;
-    docker push nielsdenissen/airlock-dev-apache-atlas:$DOCKER_TAG;
+    docker pull wbaa/airlock-dev-apache-atlas:latest;
+    travis_wait 80 docker build --quiet -t wbaa/airlock-dev-apache-atlas:$DOCKER_TAG .;
+    docker push wbaa/airlock-dev-apache-atlas:$DOCKER_TAG;
   fi
 - if [ -n "$TRAVIS_TAG" ]; then 
-    docker tag nielsdenissen/airlock-dev-apache-atlas:$DOCKER_TAG nielsdenissen/airlock-dev-apache-atlas:latest;
-    docker push nielsdenissen/airlock-dev-apache-atlas:latest;
+    docker tag wbaa/airlock-dev-apache-atlas:$DOCKER_TAG wbaa/airlock-dev-apache-atlas:latest;
+    docker push wbaa/airlock-dev-apache-atlas:latest;
   fi
