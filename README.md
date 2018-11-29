@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/ing-bank/airlock-dev-apache-atlas.svg?branch=master)](https://travis-ci.org/ing-bank/airlock-dev-apache-atlas)
-[![](https://images.microbadger.com/badges/image/nielsdenissen/airlock-dev-apache-atlas:latest.svg)](https://microbadger.com/images/nielsdenissen/airlock-dev-apache-atlas:latest)
+[![](https://images.microbadger.com/badges/image/wbaa/airlock-dev-apache-atlas:latest.svg)](https://microbadger.com/images/wbaa/airlock-dev-apache-atlas:latest)
 
 
 # Airlock Dev - Apache Atlas
