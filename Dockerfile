@@ -27,4 +27,4 @@ COPY resources/atlas-setup.sh /tmp
 
 ENTRYPOINT ["sh", "-c", "/entrypoint.sh"]
 
-EXPOSE 21000 9027
+EXPOSE 21000 9027 9026
