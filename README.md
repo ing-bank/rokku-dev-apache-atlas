@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/ing-bank/airlock-dev-apache-atlas.svg?branch=master)](https://travis-ci.org/ing-bank/airlock-dev-apache-atlas)
-[![](https://images.microbadger.com/badges/image/wbaa/airlock-dev-apache-atlas:latest.svg)](https://microbadger.com/images/wbaa/airlock-dev-apache-atlas:latest)
+[![Build Status](https://travis-ci.org/ing-bank/rokku-dev-apache-atlas.svg?branch=master)](https://travis-ci.org/ing-bank/rokku-dev-apache-atlas)
+[![](https://images.microbadger.com/badges/image/wbaa/rokku-dev-apache-atlas:latest.svg)](https://microbadger.com/images/wbaa/rokku-dev-apache-atlas:latest)
 
 
-# Airlock Dev - Apache Atlas
+# Rokku Dev - Apache Atlas
 
 ## Background
 

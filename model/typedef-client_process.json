@@ -3,7 +3,7 @@
     {
       "superTypes" : [ "Process" ],
       "category" : "ENTITY",
-      "name" : "airlock_client",
+      "name" : "rokku_client",
       "description" : "a type definition for AWS tools",
       "typeVersion" : "1.1",
       "attributeDefs" : [
