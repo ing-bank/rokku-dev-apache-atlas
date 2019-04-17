@@ -29,9 +29,9 @@ if [ "$start_timeout_exceeded" = "false" ]; then
     printf "\nclassifications type created\n"
 
     # Setup atlas services
-    printf "Creating  airlock_client type... \n"
+    printf "Creating  rokku_client type... \n"
     curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/tmp/model/typedef-client_process.json
-    printf "\nairlock_client created\n"
+    printf "\nrokku_client created\n"
 
     sleep 15
     echo "Done setting up Atlas types "

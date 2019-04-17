@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/ing-bank/airlock-dev-apache-atlas.svg?branch=master)](https://travis-ci.org/ing-bank/airlock-dev-apache-atlas)
-[![](https://images.microbadger.com/badges/image/wbaa/airlock-dev-apache-atlas:latest.svg)](https://microbadger.com/images/wbaa/airlock-dev-apache-atlas:latest)
+[![Build Status](https://travis-ci.org/ing-bank/rokku-dev-apache-atlas.svg?branch=master)](https://travis-ci.org/ing-bank/rokku-dev-apache-atlas)
+[![](https://images.microbadger.com/badges/image/wbaa/rokku-dev-apache-atlas:latest.svg)](https://microbadger.com/images/wbaa/rokku-dev-apache-atlas:latest)
 
 
-# Airlock Dev - Apache Atlas
+# Rokku Dev - Apache Atlas
 
 ## Background
 
@@ -25,7 +25,7 @@ As base image Centos 7 has been used
 http://localhost:21000
 ```
 
-or verify that server is up and running using
+Or verify that server is up and running using
 ```
 curl -u admin:admin http://localhost:21000/api/atlas/admin/version
 ```

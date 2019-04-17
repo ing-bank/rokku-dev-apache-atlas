@@ -3,7 +3,7 @@ services:
 
   atlas-server:
     build: .
-    image: wbaa/airlock-dev-apache-atlas
+    image: wbaa/rokku-dev-apache-atlas
     ports:
       - "21000:21000"
     depends_on:

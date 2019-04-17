@@ -16,11 +16,11 @@ script:
 - export DOCKER_TAG="${TRAVIS_BRANCH/\//_}"
 - if [ "${TRAVIS_BRANCH}" != "master" ]; then 
     echo "Build image for tag ${DOCKER_TAG}";
-    docker pull wbaa/airlock-dev-apache-atlas:latest;
-    travis_wait 80 docker build --quiet -t wbaa/airlock-dev-apache-atlas:$DOCKER_TAG .;
-    docker push wbaa/airlock-dev-apache-atlas:$DOCKER_TAG;
+    docker pull wbaa/rokku-dev-apache-atlas:latest;
+    travis_wait 80 docker build --quiet -t wbaa/rokku-dev-apache-atlas:$DOCKER_TAG .;
+    docker push wbaa/rokku-dev-apache-atlas:$DOCKER_TAG;
   fi
 - if [ -n "$TRAVIS_TAG" ]; then 
-    docker tag wbaa/airlock-dev-apache-atlas:$DOCKER_TAG wbaa/airlock-dev-apache-atlas:latest;
-    docker push wbaa/airlock-dev-apache-atlas:latest;
+    docker tag wbaa/rokku-dev-apache-atlas:$DOCKER_TAG wbaa/rokku-dev-apache-atlas:latest;
+    docker push wbaa/rokku-dev-apache-atlas:latest;
   fi
