@@ -25,7 +25,7 @@ As base image Centos 7 has been used
 http://localhost:21000
 ```
 
-or verify that server is up and running using
+Or verify that server is up and running using
 ```
 curl -u admin:admin http://localhost:21000/api/atlas/admin/version
 ```
