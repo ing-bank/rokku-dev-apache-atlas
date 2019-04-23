@@ -9,13 +9,11 @@ services:
     depends_on:
       - "zookeeper"
       - "kafka" 
-	  
   zookeeper:
     image: wurstmeister/zookeeper
     hostname: zookeeper
     ports:
-      - "2181:2181"
-	  
+      - "2181:2181"  
   kafka:
     container_name: kafka
     image: wurstmeister/kafka
@@ -28,4 +26,4 @@ services:
       KAFKA_ADVERTISED_PORT: 9092
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     depends_on:
-      - zookeeper	  
+      - zookeeper  
