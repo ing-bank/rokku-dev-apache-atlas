@@ -24,6 +24,7 @@ RUN cd /opt \
 
 COPY model /tmp/model
 COPY resources/atlas-setup.sh /tmp
+COPY resources/credentials /tmp
 
 COPY resources/atlas-application.properties /opt/apache-atlas-1.1.0/conf/
 
