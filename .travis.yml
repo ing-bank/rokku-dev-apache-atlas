@@ -11,13 +11,12 @@ env:
 # We will not build an image on the master tag, thereby forcing people to use tagged versions only
 # Also there is an issue with using TRAVIS_BRANCH for PRs since this variable will be set to the target of the PR (e.g. master for PR to master) and then build an image for master unwanted before the merge happened
 script:
-- if [ -n "$TRAVIS_TAG" ]; then 
-    echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    export DOCKER_TAG="${TRAVIS_BRANCH/\//_}"
-    echo "Build image for tag ${DOCKER_TAG}";
-    docker pull wbaa/rokku-dev-apache-atlas:latest;
-    travis_wait 80 docker build --quiet -t wbaa/rokku-dev-apache-atlas:$DOCKER_TAG .;
-    docker push wbaa/rokku-dev-apache-atlas:$DOCKER_TAG;
-    docker tag wbaa/rokku-dev-apache-atlas:$DOCKER_TAG wbaa/rokku-dev-apache-atlas:latest;
-    docker push wbaa/rokku-dev-apache-atlas:latest;
-  fi
+
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+export DOCKER_TAG="${TRAVIS_BRANCH/\//_}"
+echo "Build image for tag ${DOCKER_TAG}";
+docker pull wbaa/rokku-dev-apache-atlas:latest;
+travis_wait 80 docker build -t wbaa/rokku-dev-apache-atlas:$DOCKER_TAG .;
+docker push wbaa/rokku-dev-apache-atlas:$DOCKER_TAG;
+docker tag wbaa/rokku-dev-apache-atlas:$DOCKER_TAG wbaa/rokku-dev-apache-atlas:latest;
+docker push wbaa/rokku-dev-apache-atlas:latest;
