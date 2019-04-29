@@ -1,5 +1,7 @@
 #!/bin/bash
 
+function faketty { script -qfc "$(printf "%q " "$@")" /dev/null ; }
+
 if [[ -z "$START_TIMEOUT" ]]; then
     START_TIMEOUT=900
 fi
@@ -35,6 +37,12 @@ if [ "$start_timeout_exceeded" = "false" ]; then
 
     sleep 15
     echo "Done setting up Atlas types "
+
+    if [ ! -z "${ATLAS_PROVISION_EXAMPLES}" ]; then
+        # Need faketty as otherwise we cannot supply credentials
+        faketty /opt/apache-atlas-1.1.0/bin/quick_start.py http://localhost:21000 < /tmp/credentials
+        echo "Done provisioning example data"
+    fi
 else
     echo "Waited too long for Atlas to start, skipping setup..."
 fi
