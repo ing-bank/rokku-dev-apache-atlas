@@ -40,7 +40,7 @@ if [ "$start_timeout_exceeded" = "false" ]; then
 
     if [ ! -z "${ATLAS_PROVISION_EXAMPLES}" ]; then
         # Need faketty as otherwise we cannot supply credentials
-        faketty /opt/apache-atlas-1.1.0/bin/quick_start.py http://localhost:21000 < /tmp/credentials
+        faketty /opt/atlas/bin/quick_start.py http://localhost:21000 < /tmp/credentials
         echo "Done provisioning example data"
     fi
 else
