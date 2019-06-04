@@ -2,7 +2,7 @@ FROM maven:3.5.4-jdk-8 AS stage-atlas
 
 ENV ATLAS_VERSION 2.0.0
 ENV TARBALL apache-atlas-${ATLAS_VERSION}-sources.tar.gz
-ENV	ATLAS_REPO      https://dist.apache.org/repos/dist/dev/atlas/${ATLAS_VERSION}-rc0/${TARBALL}
+ENV	ATLAS_REPO      https://dist.apache.org/repos/dist/release/atlas/${ATLAS_VERSION}/${TARBALL}
 ENV	MAVEN_OPTS	"-Xms2g -Xmx2g"
 
 RUN curl ${ATLAS_REPO} -o ${TARBALL} \
