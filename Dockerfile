@@ -15,11 +15,14 @@ FROM centos:7
 
 COPY --from=stage-atlas /apache-atlas.tar.gz /apache-atlas.tar.gz
 
-RUN yum update -y  \
-	&& yum install java-1.8.0-openjdk java-1.8.0-openjdk-devel python net-tools -y \
-	&& yum clean all 
+RUN yum update -y \
+	&& yum install -y python python36 java-1.8.0-openjdk java-1.8.0-openjdk-devel net-tools \
+	&& yum clean all
 RUN groupadd hadoop && \
 	useradd -m -d /opt/atlas -g hadoop atlas
+
+
+RUN pip3 install amundsenatlastypes
 
 USER atlas
 
@@ -29,6 +32,7 @@ RUN cd /opt \
 COPY model /tmp/model
 COPY resources/atlas-setup.sh /tmp
 COPY resources/credentials /tmp
+COPY resources/init_amundsen.py /tmp
 
 COPY resources/atlas-application.properties /opt/atlas/conf/
 

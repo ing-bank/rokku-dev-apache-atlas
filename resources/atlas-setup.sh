@@ -35,6 +35,11 @@ if [ "$start_timeout_exceeded" = "false" ]; then
     curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/tmp/model/typedef-client_process.json
     printf "\nrokku_client created\n"
 
+    # Setup required Amundsen entity definitions
+    printf "Creating Amundsen Entity Definitions... \n"
+    python3 /tmp/init_amundsen.py
+    printf "Amundsen Entity Definitions Created... \n"
+
     sleep 15
     echo "Done setting up Atlas types "
 
