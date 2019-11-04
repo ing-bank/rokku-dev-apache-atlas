@@ -34,7 +34,6 @@ if [ "$start_timeout_exceeded" = "false" ]; then
     printf "Creating  rokku_client type... \n"
     curl -i -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -u admin:admin 'http://localhost:21000/api/atlas/v2/types/typedefs' -d @/tmp/model/typedef-client_process.json
     printf "\nrokku_client created\n"
-
     sleep 15
     echo "Done setting up Atlas types "
 
@@ -43,6 +42,14 @@ if [ "$start_timeout_exceeded" = "false" ]; then
         faketty /opt/atlas/bin/quick_start.py http://localhost:21000 < /tmp/credentials
         echo "Done provisioning example data"
     fi
+
+    if [ ! -z "${ATLAS_KICKSTART_AMUNDSEN}" ]; then
+        # Setup required Amundsen entity definitions
+        printf "Creating Amundsen Entity Definitions... \n"
+        python3 /tmp/init_amundsen.py
+        printf "Amundsen Entity Definitions Created... \n"
+    fi
+
 else
     echo "Waited too long for Atlas to start, skipping setup..."
 fi
