@@ -39,9 +39,10 @@ if [ "$start_timeout_exceeded" = "false" ]; then
 
     if [ ! -z "${ATLAS_PROVISION_EXAMPLES}" ]; then
         # Need faketty as otherwise we cannot supply credentials
-        faketty /opt/atlas/bin/quick_start.py http://localhost:21000 < /tmp/credentials
+        faketty /opt/atlas/bin/quick_start.py http://localhost:21000 < /tmp/credentials | grep 'Sample data added to Apache Atlas Server.'
         echo "Done provisioning example data"
     fi
+
 
     if [ ! -z "${ATLAS_KICKSTART_AMUNDSEN}" ]; then
         # Setup required Amundsen entity definitions
