@@ -5,9 +5,8 @@ ENV TARBALL apache-atlas-${ATLAS_VERSION}-sources.tar.gz
 ENV	ATLAS_REPO      https://dist.apache.org/repos/dist/release/atlas/${ATLAS_VERSION}/${TARBALL}
 ENV	MAVEN_OPTS	"-Xms2g -Xmx2g"
 
-RUN curl ${ATLAS_REPO} -o ${TARBALL} \
-	&& tar xzf ${TARBALL} \
-	&& cd apache-atlas-sources-${ATLAS_VERSION} \
+RUN git clone http://github.com/apache/atlas.git \
+	&& cd atlas \
 	&& mvn clean -DskipTests package -Pdist,embedded-hbase-solr \
 	&& mv distro/target/apache-atlas-*-bin.tar.gz /apache-atlas.tar.gz
 
