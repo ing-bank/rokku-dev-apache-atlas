@@ -1,12 +1,11 @@
 FROM maven:3.5.4-jdk-8 AS stage-atlas
 
-ENV ATLAS_VERSION "3.0.0-e44eb9d64"
-ENV TARBALL apache-atlas-${ATLAS_VERSION}-sources.tar.gz
-ENV	ATLAS_REPO      https://dist.apache.org/repos/dist/release/atlas/${ATLAS_VERSION}/${TARBALL}
-ENV	MAVEN_OPTS	"-Xms2g -Xmx2g"
+ENV	MAVEN_OPTS "-Xms2g -Xmx2g"
+ENV ATLAS_REV "21b15842fd74bc91910b2d8901dbea57769065d0"
 
 RUN git clone http://github.com/apache/atlas.git \
 	&& cd atlas \
+	&& git reset --hard $ATLAS_REV \
 	&& mvn clean -DskipTests package -Pdist,embedded-hbase-solr \
 	&& mv distro/target/apache-atlas-*-bin.tar.gz /apache-atlas.tar.gz
 
@@ -17,11 +16,11 @@ COPY --from=stage-atlas /apache-atlas.tar.gz /apache-atlas.tar.gz
 RUN yum update -y \
 	&& yum install -y python python36 java-1.8.0-openjdk java-1.8.0-openjdk-devel net-tools \
 	&& yum clean all
+
 RUN groupadd hadoop && \
 	useradd -m -d /opt/atlas -g hadoop atlas
 
-
-RUN pip3 install amundsenatlastypes
+RUN pip3 install amundsenatlastypes==1.1.0
 
 USER atlas
 
